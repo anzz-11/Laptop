@@ -32,7 +32,7 @@ if st.button("Predict Price"):
 
     query = pd.DataFrame([[co, ty, cpu, ram, gpu, os, we, ips, touch, cpu_speed, hdd, ssd, ppi]],
                          columns=["Company","TypeName","Cpu","Ram","Gpu","OpSys",
-                                  "Weight","IPS","Touchscreen","Cpu_Speed","HDD","SSD","PPI"])
+                                  "Weight","IPS","Touchscreen","Cpu_speed","HDD","SSD","ppi"])
     
     op = ml_model.predict(query)
     st.subheader(f"The Predicted Price of Laptop is ₹ {int(round(op[0], -2))}")
